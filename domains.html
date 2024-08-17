@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinglessDomains</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #101010;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #00ff27;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .dot {
+            color: #00ff27;
+        }
+
+        .domain {
+            color: #ffffff;
+        }
+
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            width: 15px;
+            height: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1100;
+        }
+
+        .menu-icon span {
+            background-color: #ffffff;
+            height: 2px;
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #101010;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .menu a {
+            color: #00ff27;
+            text-decoration: none;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        .menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menu -->
+    <nav class="menu" id="menu">
+        <a href="https://wingless.cc" target="_blank">Home</a>
+        <a href="https://wingless.cc/radio" target="_blank">Radio</a>
+        <a href="https://wingless.cc/domains" target="_blank">Domains</a>
+        <a href="https://wingless.cc/socials" target="_blank">Socials</a>
+    </nav>
+
+    <!-- Page Content -->
+    <h1>Owned Domains</h1>
+    <ul>
+        <li><span class="dot">&#8226;</span> <span class="domain">antinft.club</span></li>
+        <li><span class="dot">&#8226;</span> <span class="domain">battlecraft.network</span></li>
+        <li><span class="dot">&#8226;</span> <span class="domain">empire-mc.com</span></li>
+        <li><span class="dot">&#8226;</span> <span class="domain">seesharpeden.com</span></li>
+        <li><span class="dot">&#8226;</span> <span class="domain">virial.xyz</span></li>
+        <li><span class="dot">&#8226;</span> <span class="domain">wingless.cc</span></li>
+        <li><span class="dot">&#8226;</span> <span class="domain">wnglss.cc</span></li>
+        <li><span class="dot">&#8226;</span> <span class="domain">wnglss.net</span></li>
+        <li><span class="dot">&#8226;</span> <span class="domain">yellowsticker.club</span></li>
+    </ul>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
