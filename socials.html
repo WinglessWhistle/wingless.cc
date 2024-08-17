@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinglessSocials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #101010;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #00ff27;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .socials {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .socials a,
+        .socials div {
+            display: block;
+            margin: 20px 0;
+            font-size: 1.5em;
+        }
+
+        .socials a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .socials div {
+            color: #00ff27;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .socials a.handle,
+        .socials div.handle {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            visibility: hidden;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            /* Position above the element */
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9em;
+        }
+
+        .socials div:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Hamburger Menu */
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            width: 15px;
+            height: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1100;
+        }
+
+        .menu-icon span {
+            background-color: #ffffff;
+            height: 2px;
+            border-radius: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Menu */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #101010;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .menu a {
+            color: #00ff27;
+            text-decoration: none;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        .menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Menu -->
+    <nav class="menu" id="menu">
+        <a href="https://wingless.cc" target="_blank">Home</a>
+        <a href="https://wingless.cc/radio" target="_blank">Radio</a>
+        <a href="https://wingless.cc/domains" target="_blank">Domains</a>
+        <a href="https://wingless.cc/socials" target="_blank">Socials</a>
+    </nav>
+
+    <h1>Wingless Socials</h1>
+
+    <div class="socials">
+        <div>Twitter:
+            <span class="tooltip">I will NEVER call it X</span>
+        </div>
+        <a href="https://twitter.com/winglesswhistle" class="handle">@WinglessWhistle</a>
+        <div>Instagram:</div> <a href="https://instagram.com/wingless_whistle" class="handle">@Wingless_Whistle</a>
+        <div>Email:</div> <a href="mailto:gday@wingless.cc" class="handle">gday@wingless.cc</a>
+        <div>Steam:</div> <a href="https://steamcommunity.com/id/winglesswhistle/" class="handle">WinglessWhistle</a>
+        <div>Twitch:</div> <a href="https://twitch.tv/winglesswhistle" class="handle">WinglessWhistle</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
